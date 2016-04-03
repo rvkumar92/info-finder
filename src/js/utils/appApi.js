@@ -1,5 +1,4 @@
-var firebase = require('firebase'),
-    AppActions = require('../actions/AppActions');
+var AppActions = require('../actions/AppActions');
 module.exports = {
 
 };
