@@ -1,11 +1,22 @@
 var React = require('react'),
-    appApi = require('../utils/appApi');
+    appApi = require('../utils/appApi'),
+    Result = require('./Result');
 
 var SearchResults = React.createClass({
     render(){
+        if(this.props.searchText!=''){
+            var resultForm = <h2 className="page-header">Results for {this.props.searchText}</h2>
+        }else{
+            var resultForm = '';
+        }
         return(
             <div>
-                Search Results
+                {resultForm}
+                {
+                    this.props.results.map((result,i)=>{
+                        return <Result key={i} result={result}/>
+                    })
+                }
             </div>
         )
     }

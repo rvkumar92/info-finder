@@ -22,14 +22,15 @@ var App = React.createClass({
         return(
             <div>
                 <SearchForm />
-                <SearchResults />
+                <SearchResults searchText={this.state.searchText} results={this.state.results} />
             </div>
         )
     }
 });
 getAppState = function(){
     return {
-
+        results: AppStore.getResults(),
+        searchText: AppStore.getSearchText()
     };
 };
 module.exports = App;

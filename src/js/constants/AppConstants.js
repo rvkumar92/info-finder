@@ -1,3 +1,4 @@
 module.exports = {
-
+    SEARCH_CONTEXT: 'SEARCH_CONTEXT',
+    RECEIVE_RESULT: 'RECEIVE_RESULT'
 };
